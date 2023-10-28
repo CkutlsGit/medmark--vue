@@ -19,6 +19,44 @@
                 <h3>Lets Go?</h3>
             </div>
         </section>
+        <section class="inputs">
+            <div class="input__form">
+                <div class="input__block">
+                    <label>5</label>
+                    <input 
+                    type="number" class="input-five" min="0"
+                    v-model="fiveMark"
+                    >
+                </div>
+                <div class="input__block">
+                    <label>4</label>
+                    <input 
+                    type="number" class="input-four" min="0"
+                    v-model="fourMark"
+                    >
+                </div>
+                <div class="input__block">
+                    <label>3</label>
+                    <input 
+                    type="number" class="input-three" min="0"
+                    v-model="threeMark"
+                    >
+                </div>
+                <div class="input__block">
+                    <label>2</label>
+                    <input 
+                    type="number" class="input-two" min="0"
+                    v-model="twoMark"
+                    >
+                </div>
+            </div>
+        </section>
+        <section class="endmark">
+            <div class="endmark__content">
+                <h1 v-if="fiveMark === 0 && fourMark === 0 && threeMark === 0 && twoMark == 0">Итоговая оценка:  Введите оценки</h1>
+                <h1 v-else>Итоговая оценка: {{ FindendMark.toFixed(2) }}</h1>
+            </div>
+        </section>
     </div>
     <div v-else>
         <login-input
@@ -40,6 +78,16 @@ export default {
         return {
             login: '',
             confirm: false,
+            fiveMark: 0,
+            fourMark: 0,
+            threeMark: 0,
+            twoMark: 0,
+            endMark: 0,
+        }
+    },
+    computed: {
+        FindendMark() {
+            return (this.fiveMark * 5 + this.fourMark * 4 + this.threeMark * 3 + this.twoMark * 2) / (this.fiveMark + this.fourMark + this.threeMark + this.twoMark)
         }
     },
     methods: {

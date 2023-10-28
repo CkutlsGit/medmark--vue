@@ -1,5 +1,5 @@
 <template>
-    <div v-if="confirm">
+    <div v-if="confirm" class="main">
         <section>
         <div class="header">
             <div class="header__content">
@@ -51,6 +51,6 @@ export default {
 }
 </script>
 
-<style src="../../public/main.css">
+<style src="../../public/main.css" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;600&display=swap');
 </style>

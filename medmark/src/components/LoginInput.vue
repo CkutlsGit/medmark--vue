@@ -11,14 +11,14 @@
             @click="onConfirm"
             :disabled="login === ''"
         >
-            Подтвердить
+            Confirm login
         </button>
         <button
             type="button"
             :disabled="login !== ''"
             @click="onConfirmAnonimus"
         >
-            Остаться без логина
+            Log in without a login
         </button>
     </section>
 </template>

@@ -1,13 +1,13 @@
 <template>
     <div v-if="confirm" class="main">
-        <section>
+        <header>
         <div class="header">
             <div class="header__content">
                 <h2 class="header__logo">MedMark</h2>
                 <h1 class="header__login">{{ login }}</h1>
             </div>
         </div>
-        </section>
+        </header>
         <section class="intro">
             <div class="intro__content">
                 <h1>How does it work?</h1>

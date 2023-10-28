@@ -53,8 +53,8 @@
         </section>
         <section class="endmark">
             <div class="endmark__content">
-                <h1 v-if="isNaN(FindendMark)">Итоговая оценка:  Введите оценки</h1>
-                <h1 v-else>Итоговая оценка: {{ FindendMark.toFixed(2) }}</h1>
+                <h1 v-if="isNaN(FindendMark)">Final mark:  Enter your marks</h1>
+                <h1 v-else>Final mark: {{ FindendMark.toFixed(2) }}</h1>
             </div>
         </section>
     </div>

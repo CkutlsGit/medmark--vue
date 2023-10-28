@@ -171,4 +171,38 @@ html, body {
 
 /* /Intro */
 
+/* Inputs */
+
+.inputs {
+    display: flex;
+    justify-content: center;
+}
+
+.input__block {
+    text-align: center;
+}
+
+.input__block label {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input__form input {
+    width: 100px;
+    height: 20px;
+    margin-left: 10%;
+}
+
+/* /Inputs */
+
+/* EndMark */
+
+.endmark {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+/* /EndMark */
+
 /* /Main Page */

@@ -1,6 +1,8 @@
 <template>
-    <div class="root">
-        <h1>Hello</h1>
+    <div class="header">
+        <div class="header__content">
+            <h2 class="header__logo">MedMark</h2>
+        </div>
     </div>
 </template>
 
@@ -10,6 +12,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style src="../../public/main.css"></style>

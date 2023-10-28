@@ -1,15 +1,18 @@
 <template>
     <section class="login">
-        <h1>Can you write login?</h1>
-        {{ login }}
+        <div class="login__content">
+            <h1 class="login-ask">Can you write login?</h1>
         <input 
             type="text"
             v-model.trim="login"
+            class="login-input"
         >
-        <button
+        <div class="login-buttons">
+            <button
             type="button"
             @click="onConfirm"
             :disabled="login === ''"
+            class="login-confirm"
         >
             Confirm login
         </button>
@@ -17,9 +20,12 @@
             type="button"
             :disabled="login !== ''"
             @click="onConfirmAnonimus"
+            class="login-without"
         >
-            Log in without a login
+            Without login
         </button>
+        </div>
+        </div>
     </section>
 </template>
 
@@ -43,6 +49,7 @@ export default {
 }
 </script>
 
-<style >
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;600&display=swap');
+@import url('../../public/main.css');
 </style>

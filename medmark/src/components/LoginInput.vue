@@ -9,6 +9,7 @@
         <button
             type="button"
             @click="onConfirm"
+            :disabled="checkValidationLogin(correctLogin)"
         >
             Подтвердить
         </button>
@@ -20,12 +21,16 @@ export default {
     name: 'LoginInput',
     data() {
         return {
-            login: ''
+            login: '',
+            correctLogin: false
         }
     },
     methods: {
         onConfirm() {
             this.$emit('confirmed',this.login)
+        },
+        checkValidationLogin() {
+            return this.login === ''
         }
     }
 }

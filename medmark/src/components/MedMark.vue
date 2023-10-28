@@ -1,9 +1,10 @@
 <template>
-    <div>
+    <div v-if="confirm">
         <section>
         <div class="header">
             <div class="header__content">
                 <h2 class="header__logo">MedMark</h2>
+                <h1>{{ login }}</h1>
             </div>
         </div>
         </section>
@@ -19,11 +20,34 @@
             </div>
         </section>
     </div>
+    <div v-else>
+        <login-input
+            @confirmed="AcceptValuesfromLoginInput"
+        >
+        </login-input>
+    </div>
 </template>
 
 <script>
+import LoginInput from './LoginInput.vue';
+
 export default {
     name: 'MedMark',
+    components: {
+        LoginInput
+    },
+    data() {
+        return {
+            login: '',
+            confirm: false,
+        }
+    },
+    methods: {
+        AcceptValuesfromLoginInput(loginValue) {
+            this.login = loginValue
+            this.confirm = true
+        }
+    }
 }
 </script>
 

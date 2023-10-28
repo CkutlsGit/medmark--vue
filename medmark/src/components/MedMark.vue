@@ -1,21 +1,24 @@
 <template>
-    <section>
+    <div>
+        <section>
         <div class="header">
-        <div class="header__content">
-            <h2 class="header__logo">MedMark</h2>
+            <div class="header__content">
+                <h2 class="header__logo">MedMark</h2>
+            </div>
         </div>
+        </section>
+        <section class="intro">
+            <div class="intro__content">
+                <h1>How does it work?</h1>
+                <p>
+                    You need to specify 
+                    the number of specific 
+                    ratings in each input field.
+                </p>
+                <h3>Lets Go?</h3>
+            </div>
+        </section>
     </div>
-    </section>
-    <section class="intro">
-        <div class="intro__content">
-            <h1>How does it work?</h1>
-            <p>
-                You need to specify 
-                the number of specific 
-                ratings in each input field.
-            </p>
-        </div>
-    </section>
 </template>
 
 <script>

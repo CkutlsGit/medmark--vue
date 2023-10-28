@@ -9,14 +9,14 @@
         <button
             type="button"
             @click="onConfirm"
-            :disabled="checkValidationLogin(correctLogin)"
+            :disabled="login === ''"
         >
             Подтвердить
         </button>
         <button
             type="button"
             :disabled="login !== ''"
-            @click="1"
+            @click="onConfirmAnonimus"
         >
             Остаться без логина
         </button>
@@ -35,9 +35,10 @@ export default {
         onConfirm() {
             this.$emit('confirmed',this.login)
         },
-        checkValidationLogin() {
-            return this.login === '';
-        },
+        onConfirmAnonimus() {
+            const LoginAnonim = 'Anonim'
+            this.$emit('confirmed', LoginAnonim)
+        }
     }
 }
 </script>

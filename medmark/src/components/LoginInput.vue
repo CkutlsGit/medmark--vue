@@ -13,6 +13,13 @@
         >
             Подтвердить
         </button>
+        <button
+            type="button"
+            :disabled="login !== ''"
+            @click="1"
+        >
+            Остаться без логина
+        </button>
     </section>
 </template>
 
@@ -22,7 +29,6 @@ export default {
     data() {
         return {
             login: '',
-            correctLogin: false
         }
     },
     methods: {
@@ -30,8 +36,8 @@ export default {
             this.$emit('confirmed',this.login)
         },
         checkValidationLogin() {
-            return this.login === ''
-        }
+            return this.login === '';
+        },
     }
 }
 </script>

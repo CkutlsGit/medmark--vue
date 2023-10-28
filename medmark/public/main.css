@@ -14,6 +14,98 @@ html, body {
 
 /* /Def settings */
 
+/* LoginInput page */
+
+.login {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.login-ask {
+    padding: 120px 0 60px 0;
+    font-size: 29px;
+}
+
+.login-input {
+    width: 270px;
+    height: 40px;
+    font-size: 24px;
+    border: 2px solid #9b866d;
+    background: #ffffff;
+    color: #e0c48f;
+    margin-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-buttons .login-confirm:disabled {
+    background: #493636;
+    transition: 1s;
+    opacity: .4;
+    cursor: not-allowed;
+    transition: background 0.5s, opacity 0.5s;
+}
+
+.login-buttons .login-without:disabled {
+    background: #493636;
+    transition: 1s;
+    opacity: .4;
+    cursor: not-allowed;
+    transition: background 0.5s, opacity 0.5s;
+}
+
+.login-buttons .login-confirm {
+    margin-right: 20px;
+    width: 120px;
+    height: 35px;
+    background: rgba( 29, 255, 0, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 1;
+    transition: opacity 400ms cubic-bezier(0.11, 0, 0.5, 0) 10ms;
+    transition: width 400ms cubic-bezier(0.11, 0, 0.5, 0) 10ms;
+}
+
+.login-buttons .login-without {
+    width: 120px;
+    height: 35px;
+    background: rgba(177, 91, 69, 0.55);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 1;
+    transition: opacity 400ms cubic-bezier(0.11, 0, 0.5, 0) 10ms;
+    transition: width 400ms cubic-bezier(0.11, 0, 0.5, 0) 10ms;
+}
+
+.login-buttons .login-confirm:hover {
+    opacity: .6;
+    width: 160px;
+}
+
+.login-buttons .login-without:hover {
+    opacity: .6;
+    width: 160px;
+}
+
+/* /LoginInput page */
+
+/* Main Page */
+
 /* Header */
 
 .header {
@@ -32,3 +124,40 @@ html, body {
 }
 
 /* /Header */
+
+/* Intro */
+
+.intro {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.intro__content {
+    margin-top: 120px;
+}
+
+.intro__content {
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro__content h1 {
+    font-size: 28px;
+    letter-spacing: 2.5px;
+    line-height: 60px;
+    font-weight: 500;
+    color: #9b866d;
+}
+
+.intro__content p {
+    margin: 0 auto;
+    width: 336px;
+    font-size: 24px;
+    color: #e0c48f;
+    font-weight: 700;
+}
+
+/* /Intro */
+
+/* /Main Page */

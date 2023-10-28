@@ -8,7 +8,7 @@
         >
         <button
             type="button"
-            @click="confirm = true"
+            @click="onConfirm"
         >
             Подтвердить
         </button>
@@ -20,8 +20,12 @@ export default {
     name: 'LoginInput',
     data() {
         return {
-            confirm: false,
             login: ''
+        }
+    },
+    methods: {
+        onConfirm() {
+            this.$emit('confirmed',this.login)
         }
     }
 }

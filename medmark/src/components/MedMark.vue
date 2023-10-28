@@ -53,7 +53,7 @@
         </section>
         <section class="endmark">
             <div class="endmark__content">
-                <h1 v-if="fiveMark === 0 && fourMark === 0 && threeMark === 0 && twoMark == 0">Итоговая оценка:  Введите оценки</h1>
+                <h1 v-if="isNaN(FindendMark)">Итоговая оценка:  Введите оценки</h1>
                 <h1 v-else>Итоговая оценка: {{ FindendMark.toFixed(2) }}</h1>
             </div>
         </section>
@@ -82,7 +82,6 @@ export default {
             fourMark: 0,
             threeMark: 0,
             twoMark: 0,
-            endMark: 0,
         }
     },
     computed: {
@@ -90,10 +89,29 @@ export default {
             return (this.fiveMark * 5 + this.fourMark * 4 + this.threeMark * 3 + this.twoMark * 2) / (this.fiveMark + this.fourMark + this.threeMark + this.twoMark)
         }
     },
+    watch: {
+        fiveMark(newValue) {
+            this.validateAndSet(newValue, 'fiveMark')
+        },
+        fourMark(newValue) {
+            this.validateAndSet(newValue, 'fourMark')
+        },
+        threeMark(newValue) {
+            this.validateAndSet(newValue, 'threeMark')
+        },
+        twoMark(newValue) {
+            this.validateAndSet(newValue, 'twoMark')
+        },
+    },
     methods: {
         AcceptValuesfromLoginInput(loginValue) {
             this.login = loginValue
             this.confirm = true
+        },
+        validateAndSet(newValue, propName) {
+            if (newValue < 0 || newValue === '') {
+                this[propName] = 0
+            }
         }
     }
 }

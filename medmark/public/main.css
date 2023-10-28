@@ -117,10 +117,21 @@ html, body {
     height: 100%;
 }
 
+.header__content {
+    display: flex;
+    align-items: center;
+}
+
 .header .header__content .header__logo {
     font-size: 36px;
     color: #ffe4c4;
     font-weight: 600;
+    margin: 20px 20px;
+}
+
+.header .header__content .header__login {
+    font-size: 32px;
+    color: #493636;
 }
 
 /* /Header */

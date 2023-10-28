@@ -6,6 +6,7 @@
             type="text"
             v-model.trim="login"
             class="login-input"
+            maxlength="12"
         >
         <div class="login-buttons">
             <button

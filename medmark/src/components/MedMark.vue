@@ -4,7 +4,7 @@
         <div class="header">
             <div class="header__content">
                 <h2 class="header__logo">MedMark</h2>
-                <h1>{{ login }}</h1>
+                <h1 class="header__login">{{ login }}</h1>
             </div>
         </div>
         </section>

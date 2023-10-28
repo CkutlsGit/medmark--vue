@@ -7,6 +7,14 @@
     </div>
     </section>
     <section class="intro">
+        <div class="intro__content">
+            <h1>How does it work?</h1>
+            <p>
+                You need to specify 
+                the number of specific 
+                ratings in each input field.
+            </p>
+        </div>
     </section>
 </template>
 
